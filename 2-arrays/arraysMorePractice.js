@@ -1,6 +1,6 @@
 
 function nth(array, index) {
-    return array[index];
+  return array[index];
 }
 
 var animals = ['dog', 'cat', 'gerbil'];
@@ -13,7 +13,7 @@ var numbers = [3, 2, 7, 5];
 
 function rest(array) {
 
-    return array.slice(1);
+  return array.slice(1);
 }
 
 console.log(rest(numbers));
@@ -22,8 +22,8 @@ console.log("_________________________________");
 
 var numbers = [3, 2, 7, 5];
 
-function butLast(array){
-   return array.slice(0, array.length-1); 
+function butLast(array) {
+  return array.slice(0, array.length - 1);
 }
 
 console.log(butLast(numbers));
@@ -33,24 +33,24 @@ console.log("_________________________________");
 var numbers = [3, 2, 7, 5];
 
 function cons(x, array) {
-    let newArray = [];
-    newArray[0] = x;
-    for(let i = 1; i <=array.length; i++ ){
-      newArray[i] = array[i-1];
-    }
-    return newArray;
+  let newArray = [];
+  newArray[0] = x;
+  for (let i = 1; i <= array.length; i++) {
+    newArray[i] = array[i - 1];
   }
+  return newArray;
+}
 
-console.log(cons(8,numbers));
+console.log(cons(8, numbers));
 
 console.log("_________________________________");
 
 var numbers = [3, 2, 7, 5];
 
 function conj(array, x) {
-    array[array.length] = x;
-    return array;
-  }
+  array[array.length] = x;
+  return array;
+}
 
 console.log(conj(numbers, 8));
 
