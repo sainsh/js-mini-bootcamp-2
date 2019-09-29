@@ -20,6 +20,8 @@ console.log(rest(numbers));
 
 console.log("_________________________________");
 
+var numbers = [3, 2, 7, 5];
+
 function butLast(array){
    return array.slice(0, array.length-1); 
 }
@@ -28,17 +30,25 @@ console.log(butLast(numbers));
 
 console.log("_________________________________");
 
+var numbers = [3, 2, 7, 5];
+
 function cons(x, array) {
-    array.unshift(x);
-    return array;
+    let newArray = [];
+    newArray[0] = x;
+    for(let i = 1; i <=array.length; i++ ){
+      newArray[i] = array[i-1];
+    }
+    return newArray;
   }
 
 console.log(cons(8,numbers));
 
 console.log("_________________________________");
 
+var numbers = [3, 2, 7, 5];
+
 function conj(array, x) {
-    array.push(x);
+    array[array.length] = x;
     return array;
   }
 
