@@ -65,6 +65,16 @@ function longestWord(str){
             longWord = element;
         }
     }
+    let longWordWhile = "";
+    let i = 0;
+    while(i < strArray.length){
+        if(strArray[i].length > longWordWhile.length){
+            longWordWhile = strArray[i];
+        }
+        i++;
+    }
+    console.log(longWordWhile);
+
 
 
     return longWord;
@@ -89,9 +99,58 @@ function remove(array, element){
 
     }
 
+    i = 0;
+    let j = 0;
+    let newArayWhile = [];
+    while(j < array.length){
+
+        if(array[j] != element){
+            newArayWhile[i] = array[j];
+            i++;
+        }
+        j++;
+    }
+
+    console.log(newArayWhile);
+
+
+
     return newArray;
 }
 
 console.log(remove([1, 3, 6, 2, 3], 3)); // => [1, 6, 2]
+
+console.log("_________________________________");
+
+function evens(array){
+    let evenArray = [];
+    let i = 0;
+
+    for(let element of array){
+        if(element %2 == 0){
+            evenArray[i] = element;
+            i++;
+        }
+    }
+
+    i = 0;
+    let j = 0;
+    let evenArrayWhile = [];
+    while(j < array.length){
+
+        if(array[j] % 2 == 0){
+            evenArrayWhile[i] = array[j];
+            i++;
+        }
+        j++;
+    }
+
+    console.log(evenArrayWhile);
+
+    return evenArray;
+}
+
+
+console.log(evens(numbers));
 
 console.log("_________________________________");
